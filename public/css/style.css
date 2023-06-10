@@ -5,7 +5,12 @@ body {
     margin: 0;
     background-color: #434447;
 }
-
+#ptable{
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    padding: 10px;
+}
 @keyframes rotating {
     from {
         -ms-transform: rotate(0deg);
