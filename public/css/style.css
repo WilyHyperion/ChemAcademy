@@ -69,11 +69,151 @@ body {
 #title {
     width: 100%;
     text-align: center;
+    font: 5vh 'Stick No Bills', cursive;
+    color: white;
 }
 
-#ptable {
-    display: grid;
+#popOut{
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    /*background: linear-gradient(139.82deg, rgba(160, 160, 160, 0.48) 6.83%, rgb a(171, 171, 171, 0.3198) 163.81%);*/
 
+    z-index: 100;
+    /*display: ;*/
+    border: 1px solid #AAAAAA;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    border-radius: 13px;
+    padding: 10px;
+}
+#elementName{
+    width: 100%;
+    height: 10%;
+    /*background: #434447;*/
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#elementNameText{
+    text-align: center;
+    font-family: 'Stick No Bills', sans-serif;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    padding: 0;
+}
+#littleElement{
+/*    top left*/
+    position: relative;
+    top: 1.5vh;
+    left: 1.5vh;
+    width: 8.5vh;
+    height: 8.5vh;
+    background: linear-gradient(139.82deg, rgba(111, 111, 111, 0.4) 6.83%, rgba(171, 171, 171, 0.156) 163.81%);
+    border: 1px solid #AAAAAA;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 300;
+
+}
+#elementAtomicNumber{
+    position: absolute;
+    top: 0vh;
+    left: 1vh;
+    width: 5.5vw;
+    height: 5.5vw;
+    align-items: center;
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 300;
+}
+#elementInfo{
+/*    to the right of the little element*/
+    position:relative;
+    top: 1.5vh;
+    /*left: 8.5vh;*/
+    display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(10, 1fr);
+    padding: 10px;
+
+}
+#chatInputText:focus{
+    outline: none;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 0px 4px rgba(230, 230, 230, 0.25);
+}
+
+#chatTextP{
+    text-wrap: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    font: 1.5vh 'MuseoModerno', cursive;
+    color: white;
+    letter-spacing: 0.2em;
+}
+*::selection{
+    transition: 0.3s;
+    background: transparent;
+    color: #1a67ff;
+    text-blink: 0.3s;
+}
+#chatTextP::-webkit-scrollbar {
+    display: none;
+}
+#summary{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    /*background: #434447;*/
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#summaryTitle{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    /*background: #434447;*/
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font: 35px 'Stick No Bills', cursive;
+    color: white;
+}
+#summaryText{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    /*background: #434447;*/
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font: 15px 'Stick No Bills', cursive;
+    color: white;
 }
