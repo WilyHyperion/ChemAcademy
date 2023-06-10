@@ -5,14 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chem Academy</title>
     <script src="javascript/model3d.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 </head>
 <body>
+    <div id = "ptable">
+        
+    </div>
     <script>    
     const jsondata = fetch("data/info.json").then((response) => response.json());
+    let data = null;
     async function load(){
-        const data = await jsondata;
-           
+        data = await jsondata;
+        console.log("data" + data.elements);
+        for(let  v of data.elements){
+            addElement(v);
+        }
+    }
+    async function addElement(v){
+        const element = document.createElement("div");
+        element.setAttribute("class", "element");
+        element.setAttribute("id", v.name);
+        element.style.gridColumnStart = v.xpos;
+        element.style.gridRowStart = v.ypos;
+        element.innerHTML = v.symbol;
+        document.getElementById("ptable").appendChild(element);
+
     }
     load();
     </script>
