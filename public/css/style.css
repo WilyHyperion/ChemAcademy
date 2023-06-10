@@ -138,29 +138,6 @@ body {
     font-weight: 300;
 
 }
-#elementAtomicNumber{
-    position: absolute;
-    top: 0vh;
-    left: 1vh;
-    width: 5.5vw;
-    height: 5.5vw;
-    align-items: center;
-    font-family: 'MuseoModerno', cursive;
-    font-weight: 300;
-}
-#elementInfo{
-    /*    to the right of the little element*/
-    position:relative;
-    top: 1.5vh;
-    /*left: 8.5vh;*/
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    width: fit-content;
-    row-gap: 0.8vh;
-    left: 2vw;
-    font: 2vh 'Stick No Bills', cursive;
-    color: white;
-}
 #chatInputText:focus{
     outline: none;
     border: 1px solid #e8e8e8;
@@ -218,8 +195,6 @@ body {
     top: 50%;
     left: 5%;
     margin-bottom: 10px;
-    width: 70%;
-    height: 40%;
 
 }
 #summaryText{
@@ -376,16 +351,40 @@ body {
     font-family: 'MuseoModerno', cursive;
     font-weight: 300;
 }
-#elementInfo{
-    /*    to the right of the little element*/
-    position:relative;
-    top: 1.5vh;
-    /*left: 8.5vh;*/
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    padding: 20px;
-
+#elementAtomicMass{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 50%;
+    height: 70%;
+    /*background: #434447;*/
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font: 15px 'Stick No Bills', cursive;
+    color: white;
+}
+#elementAtomicPhase{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 5.5vw;
+    height: 5.5vw;
+    align-items: center;
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 300;
+}
+#elementAtomicDensity{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 5.5vw;
+    height: 5.5vw;
+    align-items: center;
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 300;
 }
 #chatInputText:focus{
     outline: none;
