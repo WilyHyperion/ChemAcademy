@@ -28,9 +28,9 @@ class Model3d extends HTMLElement {
     //adds canvas to the component
     const cnv = document.createElement("canvas");
     cnv.setAttribute("id", "renderCanvas");
-    cnv.setAttribute("width", "100%");
-    cnv.setAttribute("height", "100%");
-    cnv.setAttribute("touch-action", "none");
+    
+    cnv.style = "touch-action: none; border-radius: 10px; height: 30vh; width: 33vw";
+
    // fix_dpi(cnv);
     shadow.appendChild(cnv);
     let BJSloaded = false;
