@@ -6,21 +6,21 @@
     <title>Chem Academy</title>
     <script src="javascript/model3d.js"></script>
     <link rel="stylesheet" href="/css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1 id = "title">Chem Academy</h1>
     <div id = "ptable">
         
     </div>
-    <script>    
+    <script>
     const jsondata = fetch("data/info.json").then((response) => response.json());
     let data = null;
     async function load(){
         data = await jsondata;
         console.log("data" + data.elements);
         for(let  v of data.elements){
-            addElement(v);
+            await addElement(v);
         }
     }
     async function addElement(v){
@@ -35,6 +35,42 @@
     }
     load();
     </script>
-    
+<div id="popOut">
+    <div id="elementName">
+        <h1 id="elementNameText">Element Name</h1>
+    </div>
+    <div id="onTitle">
+        <div id="littleElement">
+            <span id="elementAtomicNumber">1</span>
+            <h1 id="elementSymbol">H</h1>
+        </div>
+        <div id="elementInfo">
+            <span id="elementAtomicMass">Mass: 1.008 g/M</span>
+            <span id="elementAtomicDensity">Density: 0.08988 g/L</span>
+            <span id="elementAtomicPhase">Phase: Gas</span>
+        </div>
+    </div>
+    <div id="chatBox">
+        <p id="chatTextP"></p>
+        <div id="chatInput">
+            <label for="chatInputText"></label><input type="text" id="chatInputText" placeholder="Type here...">
+        </div>
+    </div>
+    <div id="summary">
+        <h1 id="summaryTitle">Summary</h1>
+        <p id="summaryText">Hydrogen is a chemical element with atomic number 1 which means there are 1 protons and 1 electrons in the atomic structure. The chemical symbol for Hydrogen is H. With a standard atomic weight of circa 1.008, hydrogen is the lightest element on the periodic table. Its mon atomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryon mass. Non-remnant stars are mainly composed of hydrogen in the plasma state. The most common isotope of hydrogen, termed protium (name rarely used, symbol 1H), has one proton and no neutrons.</p>
+    </div>
+</div>
+
+<script>
+    //when press enter on chatInputText, delete the text and add the text to chatTextP
+    document.getElementById("chatInputText").addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("chatTextP").innerHTML = document.getElementById("chatInputText").value + "<br> <br> <br>";
+            document.getElementById("chatInputText").value = "";
+        }
+    });
+</script>
 </body>
 </html>

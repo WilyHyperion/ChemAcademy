@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200;300;400;500;600;700;800&display=swap');
+body{
+    background: #434447;
+}
+#ptable{
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    padding: 10px;
+
+}
 .element{
     overflow: hidden;
     cursor: pointer;
@@ -8,7 +19,6 @@
     background: linear-gradient(139.82deg, rgba(111, 111, 111, 0.4) 6.83%, rgba(171, 171, 171, 0.156) 163.81%);
     border: 0.5px solid #AAAAAA;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(2px);
     border-radius: 4px;
     display: flex;
     justify-content: center;
@@ -18,12 +28,193 @@
 #title{
     width: 100%;
     text-align: center;
+    font: 5vh 'Stick No Bills', cursive;
+    color: white;
+}
+
+#popOut{
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    /*background: linear-gradient(139.82deg, rgba(160, 160, 160, 0.48) 6.83%, rgb a(171, 171, 171, 0.3198) 163.81%);*/
+
+    z-index: 100;
+    /*display: ;*/
+    border: 1px solid #AAAAAA;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    border-radius: 13px;
+    padding: 10px;
+}
+#elementName{
+    width: 100%;
+    height: 10%;
+    /*background: #434447;*/
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#elementNameText{
+    text-align: center;
+    font-family: 'Stick No Bills', sans-serif;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    padding: 0;
+}
+#littleElement{
+/*    top left*/
+    position: relative;
+    top: 1.5vh;
+    left: 1.5vh;
+    width: 8.5vh;
+    height: 8.5vh;
+    background: linear-gradient(139.82deg, rgba(111, 111, 111, 0.4) 6.83%, rgba(171, 171, 171, 0.156) 163.81%);
+    border: 1px solid #AAAAAA;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 300;
 
 }
-#ptable{
+#elementAtomicNumber{
+    position: absolute;
+    top: 0vh;
+    left: 1vh;
+    width: 5.5vw;
+    height: 5.5vw;
+    align-items: center;
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 300;
+}
+#elementInfo{
+/*    to the right of the little element*/
+    position:relative;
+    top: 1.5vh;
+    /*left: 8.5vh;*/
     display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    padding: 10px;
+    grid-template-rows: repeat(3, auto);
+    width: fit-content;
+    row-gap: 0.8vh;
+    left: 2vw;
+    font: 2vh 'Stick No Bills', cursive;
+    color: white;
+}
 
+#onTitle{
+    display:flex;
+    position: absolute;
+    top: 0vh;
+    left: 2vh;
+}
+
+#chatBox{
+/*    bottom right*/
+    position: absolute;
+    bottom: 1vh;
+    right: 1vh;
+    width: 50%;
+    overflow-y: scroll;
+    height: 20vh;
+/*    make text go from bottom to top*/
+    writing-mode: tb-lr;
+
+}
+#chatInputText{
+    background: linear-gradient(139.82deg, rgba(111, 111, 111, 0.64) 6.83%, rgba(171, 171, 171, 0.456) 163.81%);
+    border: 1px solid #AAAAAA;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 300;
+    color: white;
+    font-size: 1.5vh;
+    padding: 1vh;
+    overflow-y: scroll;
+    width: 50%;
+    position: fixed;
+    bottom: 8px;
+    transition: 0.2s;
+
+}
+#chatInputText:focus{
+    outline: none;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 0px 4px rgba(230, 230, 230, 0.25);
+}
+
+#chatTextP{
+    text-wrap: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    font: 1.5vh 'MuseoModerno', cursive;
+    color: white;
+    letter-spacing: 0.2em;
+}
+*::selection{
+    transition: 0.3s;
+    background: transparent;
+    color: #1a67ff;
+    text-blink: 0.3s;
+}
+#chatTextP::-webkit-scrollbar {
+    display: none;
+}
+#summary{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    /*background: #434447;*/
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#summaryTitle{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    /*background: #434447;*/
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font: 35px 'Stick No Bills', cursive;
+    color: white;
+}
+#summaryText{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    /*background: #434447;*/
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font: 15px 'Stick No Bills', cursive;
+    color: white;
 }
