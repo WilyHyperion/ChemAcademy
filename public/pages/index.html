@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chem Academy</title>
+    <script src="javascript/model3d.js"></script>
+</head>
+</head>
+<body>
+    <script>    
+    const jsondata = fetch("data/info.json").then((response) => response.json());
+    async function load(){
+        const data = await jsondata;
+           
+    }
+    load();
+    </script>
+    <model-3d background-color="#ffffff" src="https://storage.googleapis.com/search-ar-edu/periodic-table/element_115_moscovium/element_115_moscovium.glb"> </model-3d>
+    
+</body>
+</html>
