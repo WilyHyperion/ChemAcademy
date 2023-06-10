@@ -1,7 +1,7 @@
 {
     "elements": [
         {
-            "reallife": "",
+            "reallife": "Used in various industrial processes, hydrogen is employed in fuel cells, ammonia production, and as a rocket propellant",
             "find":"",
             "name": "Hydrogen",
             "appearance": "colorless gas",
@@ -46,7 +46,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in balloons and as a cooling medium, helium is used in cryogenics, helium-neon lasers, and as a gas for breathing mixtures.",
             "find":"",
             "name": "Helium",
             "appearance": "colorless gas, exhibiting a red-orange glow when placed in a high-voltage electric field",
@@ -92,7 +92,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in rechargeable batteries, lithium is employed in electronics, electric vehicles, and as a medication for bipolar disorder.",
             "find":"",
             "name": "Lithium",
             "appearance": "silvery-white",
@@ -140,7 +140,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its strength and light weight, beryllium is used in aerospace applications, X-ray windows, and as a moderator in nuclear reactors.",
             "find":"",
             "name": "Beryllium",
             "appearance": "white-gray metallic",
@@ -189,7 +189,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in ceramics, boron is employed in high-strength materials, glass production, and as a neutron absorber in nuclear reactors.",
             "find":"",
             "name": "Boron",
             "appearance": "black-brown",
@@ -239,7 +239,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Widely known for its use in various forms, carbon is employed in steel production, carbon fiber composites, and as a component in fuels and chemicals.",
             "find":"",
             "name": "Carbon",
             "appearance": null,
@@ -290,7 +290,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in the production of fertilizers, nitrogen is employed in food processing, cryogenics, and as an inert gas in various applications.",
             "find":"",
             "name": "Nitrogen",
             "appearance": "colorless gas, liquid or solid",
@@ -342,7 +342,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Essential for respiration, oxygen is used in medical applications, combustion processes, and in the production of steel and chemicals.",
             "find":"",
             "name": "Oxygen",
             "appearance": null,
@@ -395,7 +395,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its reactivity, fluorine is used in the production of fluoropolymers, toothpaste, and as a fluoridating agent in water treatment.",
             "find":"",
             "name": "Fluorine",
             "appearance": null,
@@ -449,7 +449,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in lighting applications, neon is employed in neon signs, lasers, and as a cryogenic refrigerant.",
             "find":"",
             "name": "Neon",
             "appearance": "colorless gas exhibiting an orange-red glow when placed in a high voltage electric field",
@@ -504,7 +504,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its role in table salt, sodium is used in various food processing applications, as a coolant in nuclear reactors, and in the production of chemicals.",
             "find":"",
             "name": "Sodium",
             "appearance": "silvery white metallic",
@@ -561,7 +561,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its light weight and high strength, magnesium is used in alloys, automotive parts, and as a component in electronic devices.",
             "find":"",
             "name": "Magnesium",
             "appearance": "shiny grey solid",
@@ -619,7 +619,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Widely used in construction and packaging materials, aluminum is employed in aircraft manufacturing, beverage cans, and electrical wiring.",
             "find":"",
             "name": "Aluminium",
             "appearance": "silvery gray metallic",
@@ -678,7 +678,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in semiconductors and computer chips, silicon is employed in electronics, solar cells, and as a component in glass and ceramics.",
             "find":"",
             "name": "Silicon",
             "appearance": "crystalline, reflective with bluish-tinged faces",
@@ -738,7 +738,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in fertilizers and detergents, phosphorus is employed in the production of matches, fireworks, and as a nutrient in agriculture.",
             "find":"",
             "name": "Phosphorus",
             "appearance": "colourless, waxy white, yellow, scarlet, red, violet, black",
@@ -799,7 +799,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in the production of sulfuric acid, sulfur is employed in fertilizers, rubber vulcanization, and as a preservative in wine-making.",
             "find":"",
             "name": "Sulfur",
             "appearance": "lemon yellow sintered microcrystals",
@@ -861,7 +861,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Widely used as a disinfectant, chlorine is employed in water treatment, swimming pools, and as a bleaching agent in the production of paper and textiles.",
             "find":"",
             "name": "Chlorine",
             "appearance": "pale yellow-green gas",
@@ -924,7 +924,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used as an inert gas, argon is employed in welding, lighting, and as a protective atmosphere in various industrial processes.",
             "find":"",
             "name": "Argon",
             "appearance": "colorless gas exhibiting a lilac/violet glow when placed in a high voltage electric field",
@@ -988,7 +988,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its role in cellular functions, potassium is used in fertilizers, pharmaceuticals, and as a component in certain alloys.",
             "find":"",
             "name": "Potassium",
             "appearance": "silvery gray",
@@ -1054,7 +1054,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Widely known for its role in bone health, calcium is used in the production of cement, as a dietary supplement, and in the production of metals.",
             "find":"",
             "name": "Calcium",
             "appearance": null,
@@ -1121,7 +1121,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its light weight and high melting point, scandium is used in aerospace components, high-intensity lamps, and as a tracer in oil refineries.",
             "find":"",
             "name": "Scandium",
             "appearance": "silvery white",
@@ -1189,7 +1189,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its strength, low density, and corrosion resistance, titanium is employed in aerospace applications, medical implants, and sports equipment.",
             "find":"",
             "name": "Titanium",
             "appearance": "silvery grey-white metallic",
@@ -1258,7 +1258,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used as an alloying element, vanadium is employed in steel production, as a catalyst in chemical reactions, and in rechargeable batteries.",
             "find":"",
             "name": "Vanadium",
             "appearance": "blue-silver-grey metal",
@@ -1328,7 +1328,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its hardness and corrosion resistance, chromium is used in stainless steel production, chrome plating, and as a pigment in dyes.",
             "find":"",
             "name": "Chromium",
             "appearance": "silvery metallic",
@@ -1399,7 +1399,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used as an alloying element, manganese is employed in steel production, batteries, and as a catalyst in chemical reactions.",
             "find":"",
             "name": "Manganese",
             "appearance": "silvery metallic",
@@ -1471,7 +1471,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Widely known for its strength and versatility, iron is used in construction, machinery, and as a core material in electrical transformers.",
             "find":"",
             "name": "Iron",
             "appearance": "lustrous metallic with a grayish tinge",
@@ -1544,7 +1544,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its magnetic properties and heat resistance, cobalt is employed in magnets, rechargeable batteries, and as a component in alloys.",
             "find":"",
             "name": "Cobalt",
             "appearance": "hard lustrous gray metal",
@@ -1618,7 +1618,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its resistance to corrosion, nickel is used in stainless steel production, batteries, and as a catalyst in chemical reactions.",
             "find":"",
             "name": "Nickel",
             "appearance": "lustrous, metallic, and silver with a gold tinge",
@@ -1693,7 +1693,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Widely used in electrical wiring and plumbing, copper is employed in electronics, as a heat conductor, and in the production of coins.",
             "find":"",
             "name": "Copper",
             "appearance": "red-orange metallic luster",
@@ -1769,7 +1769,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its corrosion resistance, zinc is used in galvanizing steel, as a component in batteries, and in the production of various alloys.",
             "find":"",
             "name": "Zinc",
             "appearance": "silver-gray",
@@ -1837,7 +1837,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its low melting point, gallium is employed in semiconductors, LED technology, and as a coolant in nuclear reactors.",
             "find":"",
             "name": "Gallium",
             "appearance": "silver-white",
@@ -1888,7 +1888,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in semiconductor devices, germanium is employed in fiber optics, solar cells, and as a catalyst in certain chemical reactions.",
             "find":"",
             "name": "Germanium",
             "appearance": "grayish-white",
@@ -1940,7 +1940,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in the production of pesticides, arsenic is employed in wood preservatives, semiconductors, and in some pharmaceuticals.",
             "find":"",
             "name": "Arsenic",
             "appearance": "metallic grey",
@@ -1993,7 +1993,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its photoelectric properties, selenium is used in photocopiers, solar cells, and as a dietary supplement.",
             "find":"",
             "name": "Selenium",
             "appearance": "black, red, and gray (not pictured) allotropes",
@@ -2047,7 +2047,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used as a flame retardant, bromine is employed in fire extinguishers, pesticides, and as a component in pharmaceuticals.",
             "find":"",
             "name": "Bromine",
             "appearance": null,
@@ -2102,7 +2102,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in lighting applications, krypton is employed in high-intensity discharge lamps, lasers, and as a filling gas in windows.",
             "find":"",
             "name": "Krypton",
             "appearance": "colorless gas, exhibiting a whitish glow in a high electric field",
@@ -2179,7 +2179,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its use in atomic clocks and research applications, rubidium is employed in GPS systems, spectroscopy, and as a getter in vacuum tubes.",
             "find":"",
             "name": "Rubidium",
             "appearance": "grey white",
@@ -2237,7 +2237,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in pyrotechnics, strontium is employed in fireworks, flares, and as a component in medical imaging agents.",
             "find":"",
             "name": "Strontium",
             "appearance": null,
@@ -2296,7 +2296,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in phosphors and ceramics, yttrium is employed in LED technology, superconductors, and as a component in lasers.",
             "find":"",
             "name": "Yttrium",
             "appearance": "silvery white",
@@ -2356,7 +2356,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its resistance to corrosion, zirconium is used in nuclear reactors, as a component in alloys, and in dental ceramics.",
             "find":"",
             "name": "Zirconium",
             "appearance": "silvery white",
@@ -2410,7 +2410,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its high melting point and superconducting properties, niobium is employed in superconducting magnets, aerospace applications, and as a component in alloys.",
             "find":"",
             "name": "Niobium",
             "appearance": "gray metallic, bluish when oxidized",
@@ -2465,7 +2465,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used as an alloying element, molybdenum is employed in high-strength steels, heating elements, and as a catalyst in chemical reactions.",
             "find":"",
             "name": "Molybdenum",
             "appearance": "gray metallic",
@@ -2543,7 +2543,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, technetium has limited commercial applications and is primarily used in medical imaging.",
             "find":"",
             "name": "Technetium",
             "appearance": "shiny gray metal",
@@ -2594,7 +2594,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its catalytic properties and corrosion resistance, ruthenium is employed in the production of chemicals, electronics, and as a catalyst in certain reactions.",
             "find":"",
             "name": "Ruthenium",
             "appearance": "silvery white metallic",
@@ -2645,7 +2645,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its reflective properties and corrosion resistance, rhodium is used in jewelry, catalytic converters, and as a coating for optical instruments.",
             "find":"",
             "name": "Rhodium",
             "appearance": "silvery white metallic",
@@ -2696,7 +2696,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in catalytic converters and electronics, palladium is employed in automotive applications, hydrogen purification, and as a catalyst.",
             "find":"",
             "name": "Palladium",
             "appearance": "silvery white",
@@ -2726,7 +2726,7 @@
                 2,
                 8,
                 18,
-                18
+                10
             ],
             "electron_configuration": "1s2 2s2 2p6 3s2 3p6 4s2 3d10 4p6 4d10",
             "electron_configuration_semantic": "[Kr] 4d10",
@@ -2746,7 +2746,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Widely known for its use in jewelry and currency, silver is employed in photography, electrical contacts, and as a bactericidal agent.",
             "find":"",
             "name": "Silver",
             "appearance": "lustrous white metal",
@@ -2797,7 +2797,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in batteries and pigments, cadmium is employed in rechargeable batteries, coatings, and as a component in solar cells.",
             "find":"",
             "name": "Cadmium",
             "appearance": "silvery bluish-gray metallic",
@@ -2848,7 +2848,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in transparent conductive coatings, indium is employed in touchscreens, solar cells, and as a component in low-melting alloys.",
             "find":"",
             "name": "Indium",
             "appearance": "silvery lustrous gray",
@@ -2900,7 +2900,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its low toxicity and corrosion resistance, tin is used in soldering, food packaging, and as a coating for other metals.",
             "find":"",
             "name": "Tin",
             "appearance": "silvery-white (beta, β) or gray (alpha, α)",
@@ -2953,7 +2953,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use as a flame retardant, antimony is employed in batteries, alloys, and as a component in some pharmaceuticals.",
             "find":"",
             "name": "Antimony",
             "appearance": "silvery lustrous gray",
@@ -3007,7 +3007,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in alloys and semiconductors, tellurium is employed in solar cells, thermoelectric devices, and as a coloring agent in glass.",
             "find":"",
             "name": "Tellurium",
             "appearance": null,
@@ -3062,7 +3062,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use as a disinfectant and in medical applications, iodine is employed in antiseptics, X-ray contrast media, and as a nutrient supplement.",
             "find":"",
             "name": "Iodine",
             "appearance": "lustrous metallic gray, violet as a gas",
@@ -3113,7 +3113,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in lighting applications and as a propellant, xenon is employed in xenon arc lamps, high-intensity discharge lamps, and in ion thrusters.",
             "find":"",
             "name": "Xenon",
             "appearance": "colorless gas, exhibiting a blue glow when placed in a high voltage electric field",
@@ -3164,7 +3164,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its use in atomic clocks and research applications, cesium is employed in GPS systems, in drilling fluids, and as a catalyst.",
             "find":"",
             "name": "Cesium",
             "appearance": "silvery gold",
@@ -3216,7 +3216,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in medical imaging and fireworks, barium is employed in X-ray contrast agents, drilling fluids, and as a component in ceramics.",
             "find":"",
             "name": "Barium",
             "appearance": null,
@@ -3268,7 +3268,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in catalysts and optical applications, lanthanum is employed in petroleum refining, glass manufacturing, and as a component in camera lenses.",
             "find":"",
             "name": "Lanthanum",
             "appearance": "silvery white",
@@ -3322,14 +3322,14 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in catalytic converters and glass polishing, cerium is employed in automotive applications, fuel cells, and as a component in glass.",
             "find":"",
             "name": "Cerium",
             "appearance": "silvery white",
             "atomic_mass": 140.1161,
             "boil": 3716,
             "category": "lanthanide",
-            "density": 6.77,
+            "density":  6.77,
             "discovered_by": "Martin Heinrich Klaproth",
             "melt": 1068,
             "molar_heat": 26.94,
@@ -3377,7 +3377,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in magnets and alloys, praseodymium is employed in rare-earth magnets, lasers, and as a component in high-strength metals.",
             "find":"",
             "name": "Praseodymium",
             "appearance": "grayish white",
@@ -3431,7 +3431,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in magnets and lasers, neodymium is used in computer hard drives, wind turbines, and as a coloring agent in glass.",
             "find":"",
             "name": "Neodymium",
             "appearance": "silvery white",
@@ -3484,7 +3484,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, promethium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Promethium",
             "appearance": "metallic",
@@ -3537,7 +3537,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its magnetic properties, samarium is employed in magnets, neutron capture therapy, and as a catalyst in certain reactions.",
             "find":"",
             "name": "Samarium",
             "appearance": "silvery white",
@@ -3590,7 +3590,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its phosphorescent properties, europium is used in LED displays, phosphors, and as a dopant in glass and ceramics.",
             "find":"",
             "name": "Europium",
             "appearance": null,
@@ -3643,7 +3643,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in medical imaging, gadolinium is employed in MRI contrast agents, neutron capture therapy, and as a component in electronics.",
             "find":"",
             "name": "Gadolinium",
             "appearance": "silvery white",
@@ -3696,7 +3696,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its fluorescent properties, terbium is used in color television phosphors, lasers, and as a dopant in solid-state devices.",
             "find":"",
             "name": "Terbium",
             "appearance": "silvery white",
@@ -3749,7 +3749,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its use in magnets and lasers, dysprosium is employed in high-strength magnets, lighting applications, and as a component in nuclear reactors.",
             "find":"",
             "name": "Dysprosium",
             "appearance": "silvery white",
@@ -3802,7 +3802,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its magnetic properties, holmium is used in magnets, lasers, and as a component in some electronic devices.",
             "find":"",
             "name": "Holmium",
             "appearance": "silvery white",
@@ -3855,7 +3855,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in fiber optic communications, erbium is employed in laser amplifiers, dental lasers, and as a component in glass and ceramics.",
             "find":"",
             "name": "Erbium",
             "appearance": "silvery white",
@@ -3908,7 +3908,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in portable X-ray devices, thulium is employed in medical imaging, lasers, and as a doping agent in solid-state devices.",
             "find":"",
             "name": "Thulium",
             "appearance": "silvery gray",
@@ -3961,7 +3961,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its use in lasers and alloys, ytterbium is employed in laser systems, atomic clocks, and as a component in stainless steel.",
             "find":"",
             "name": "Ytterbium",
             "appearance": null,
@@ -4014,7 +4014,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in research applications and as a catalyst, lutetium is employed in PET scanning, nuclear reactions, and as a dopant in crystals.",
             "find":"",
             "name": "Lutetium",
             "appearance": "silvery white",
@@ -4068,7 +4068,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in high-temperature alloys and nuclear reactors, hafnium is employed in turbine blades, electrical contacts, and as a control rod in reactors.",
             "find":"",
             "name": "Hafnium",
             "appearance": "steel gray",
@@ -4121,7 +4121,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its corrosion resistance and high melting point, tantalum is used in capacitors, surgical implants, and as a component in electronic devices.",
             "find":"",
             "name": "Tantalum",
             "appearance": "gray blue",
@@ -4172,7 +4172,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its high melting point and strength, tungsten is employed in incandescent light bulbs, electrical contacts, and as a component in alloys.",
             "find":"",
             "name": "Tungsten",
             "appearance": "grayish white, lustrous",
@@ -4223,7 +4223,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in superalloys and catalysts, rhenium is employed in jet engine components, electrical contacts, and as a tracer in medical imaging.",
             "find":"",
             "name": "Rhenium",
             "appearance": "silvery-grayish",
@@ -4276,7 +4276,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use in alloys and fountain pen tips, osmium is employed in electrical contacts, instrument pivots, and as a catalyst.",
             "find":"",
             "name": "Osmium",
             "appearance": "silvery, blue cast",
@@ -4327,7 +4327,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its high corrosion resistance and use in spark plugs, iridium is used in electrical contacts, jewelry, and as a component in catalysts.",
             "find":"",
             "name": "Iridium",
             "appearance": "silvery white",
@@ -4378,7 +4378,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Widely known for its use in jewelry and catalytic converters, platinum is employed in chemical reactions, fuel cells, and as a component in electronic devices.",
             "find":"",
             "name": "Platinum",
             "appearance": "silvery white",
@@ -4429,7 +4429,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily known for its use in jewelry and currency, gold is employed in electronics, dentistry, and as a component in some medical treatments.",
             "find":"",
             "name": "Gold",
             "appearance": "metallic yellow",
@@ -4480,7 +4480,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its unique liquid state at room temperature, mercury is used in thermometers, fluorescent lamps, and as a component in dental amalgams.",
             "find":"",
             "name": "Mercury",
             "appearance": "silvery",
@@ -4532,7 +4532,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily used in electronics and as a medical imaging agent, thallium is employed in infrared detectors, cardiac imaging, and as a component in high-temperature superconductors.",
             "find":"",
             "name": "Thallium",
             "appearance": "silvery white",
@@ -4584,7 +4584,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Widely known for its use in batteries and construction materials, lead is employed in car batteries, ammunition, and as a radiation shield.",
             "find":"",
             "name": "Lead",
             "appearance": "metallic gray",
@@ -4638,7 +4638,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its low toxicity and use in alloys, bismuth is used in pharmaceuticals, cosmetics, and as a component in low-melting alloys.",
             "find":"",
             "name": "Bismuth",
             "appearance": "lustrous silver",
@@ -4693,7 +4693,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "A highly radioactive element, polonium has limited commercial applications and is primarily used in scientific research and as a neutron source.",
             "find":"",
             "name": "Polonium",
             "appearance": "silvery",
@@ -4743,7 +4743,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "A highly radioactive element, astatine has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Astatine",
             "appearance": "unknown, probably metallic",
@@ -4793,7 +4793,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Primarily known for its radioactive properties, radon is used in cancer treatment, as a tracer in geological research, and in radiation therapy.",
             "find":"",
             "name": "Radon",
             "appearance": "colorless gas, occasionally glows green or red in discharge tubes",
@@ -4843,7 +4843,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "A highly radioactive element, francium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Francium",
             "appearance": null,
@@ -4894,7 +4894,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, radium is employed in cancer treatment, as a radiation source in industrial applications, and in luminous paints.",
             "find":"",
             "name": "Radium",
             "appearance": "silvery white metallic",
@@ -4946,7 +4946,7 @@
             "block": "s"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, actinium has limited commercial applications and is primarily used in scientific research and as a neutron source.",
             "find":"",
             "name": "Actinium",
             "appearance": null,
@@ -4998,7 +4998,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Valued for its potential use in nuclear power generation, thorium is employed in research reactors, as a component in high-temperature alloys, and in lighting.",
             "find":"",
             "name": "Thorium",
             "appearance": "silvery, often with black tarnish",
@@ -5052,7 +5052,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, protactinium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Protactinium",
             "appearance": "bright, silvery metallic luster",
@@ -5103,7 +5103,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Widely known for its use in nuclear power generation, uranium is employed in nuclear reactors, as a fuel in nuclear weapons, and in scientific research.",
             "find":"",
             "name": "Uranium",
             "appearance": null,
@@ -5155,7 +5155,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, neptunium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Neptunium",
             "appearance": "silvery metallic",
@@ -5206,7 +5206,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its use as a fuel in nuclear reactors and in nuclear weapons, plutonium is employed in the production of electricity, as a heat source, and in scientific research.",
             "find":"",
             "name": "Plutonium",
             "appearance": "silvery white, tarnishing to dark gray in air",
@@ -5257,7 +5257,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, americium has limited commercial applications and is primarily used in smoke detectors, industrial gauges, and in scientific research.",
             "find":"",
             "name": "Americium",
             "appearance": "silvery white",
@@ -5308,7 +5308,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, curium is used in scientific research, as a power source for spacecraft, and in nuclear batteries.",
             "find":"",
             "name": "Curium",
             "appearance": "silvery metallic, glows purple in the dark",
@@ -5359,7 +5359,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, berkelium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Berkelium",
             "appearance": "silvery",
@@ -5410,7 +5410,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, californium is used in scientific research, neutron sources, and in certain types of cancer treatment.",
             "find":"",
             "name": "Californium",
             "appearance": "silvery",
@@ -5461,7 +5461,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, einsteinium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Einsteinium",
             "appearance": "silver-colored",
@@ -5512,7 +5512,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, fermium is used in scientific research, as a neutron source, and in the synthesis of heavy elements.",
             "find":"",
             "name": "Fermium",
             "appearance": null,
@@ -5563,7 +5563,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, mendelevium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Mendelevium",
             "appearance": null,
@@ -5614,7 +5614,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, nobelium is used in scientific research and in the synthesis of heavy elements.",
             "find":"",
             "name": "Nobelium",
             "appearance": null,
@@ -5665,7 +5665,7 @@
             "block": "f"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, lawrencium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Lawrencium",
             "appearance": null,
@@ -5716,7 +5716,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, rutherfordium is used in scientific research and has potential applications in nuclear reactions.",
             "find":"",
             "name": "Rutherfordium",
             "appearance": null,
@@ -5767,7 +5767,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, dubnium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Dubnium",
             "appearance": null,
@@ -5816,7 +5816,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, seaborgium is used in scientific research and has potential applications in nuclear reactions.",
             "find":"",
             "name": "Seaborgium",
             "appearance": null,
@@ -5865,7 +5865,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, bohrium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Bohrium",
             "appearance": null,
@@ -5914,7 +5914,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, hassium is used in scientific research and has potential applications in nuclear reactions.",
             "find":"",
             "name": "Hassium",
             "appearance": null,
@@ -5963,7 +5963,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, meitnerium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Meitnerium",
             "appearance": null,
@@ -6012,7 +6012,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, darmstadtium is used in scientific research and has potential applications in nuclear reactions.",
             "find":"",
             "name": "Darmstadtium",
             "appearance": null,
@@ -6061,7 +6061,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, roentgenium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Roentgenium",
             "appearance": null,
@@ -6110,7 +6110,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, copernicium is used in scientific research and has potential applications in nuclear reactions.",
             "find":"",
             "name": "Copernicium",
             "appearance": null,
@@ -6159,7 +6159,7 @@
             "block": "d"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, nihonium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Nihonium",
             "appearance": null,
@@ -6208,7 +6208,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, flerovium is used in scientific research and has potential applications in nuclear reactions.",
             "find":"",
             "name": "Flerovium",
             "appearance": null,
@@ -6257,7 +6257,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, moscovium has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Moscovium",
             "appearance": null,
@@ -6306,7 +6306,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, livermorium is used in scientific research and has potential applications in nuclear reactions.",
             "find":"",
             "name": "Livermorium",
             "appearance": null,
@@ -6355,7 +6355,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "A radioactive element, tennessine has limited commercial applications and is primarily used in scientific research.",
             "find":"",
             "name": "Tennessine",
             "appearance": null,
@@ -6404,7 +6404,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Known for its radioactive properties, oganesson is used in scientific research and has potential applications in nuclear reactions.",
             "find":"",
             "name": "Oganesson",
             "appearance": null,
@@ -6453,7 +6453,7 @@
             "block": "p"
         },
         {
-            "reallife": "",
+            "reallife": "Its properties and potential applications are unknown due to limited study and extreme reactivity.",
             "find":"",
             "name": "Ununennium",
             "appearance": null,

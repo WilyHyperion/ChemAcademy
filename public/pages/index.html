@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,22 +17,47 @@
     <script>    
     const jsondata = fetch("data/info.json").then((response) => response.json());
     let data = null;
+    const maxval = 18;
+    let vshellimg = {
+
+    }
     async function load(){
         data = await jsondata;
-        console.log("data" + data.elements);
+        for(let i = 1; i <= 18; i++){
+            vshellimg[i] = new Image();
+            vshellimg[i].src = "images/Shell" + i + ".svg";
+            vshellimg[i].setAttribute("class", "shell");
+            vshellimg[i].setAttribute("alt", "Shell" + i);
+        }
         for(let  v of data.elements){
             addElement(v);
         }
     }
+    
+
     async function addElement(v){
         const element = document.createElement("div");
         element.setAttribute("class", "element");
         element.setAttribute("id", v.name);
         element.style.gridColumnStart = v.xpos;
         element.style.gridRowStart = v.ypos;
-        element.innerHTML = v.symbol;
+        element.innerHTML = "<p> " + v.symbol+"</p>";
+        element.onclick = function(){
+            let elemet = this.id;
+            let elobject = data.elements.find((element) => element.name == elemet);
+         }
+        let val = v.shells[v.shells.length - 1];
+        let img = vshellimg[val];
+        element.appendChild(cloneImage(img));
         document.getElementById("ptable").appendChild(element);
 
+    }
+    function cloneImage(img){
+        let i = new Image();
+        i.src = img.src;
+        i.setAttribute("class", "shell");
+        i.setAttribute("alt", img.alt);
+        return i;
     }
     load();
     </script>
