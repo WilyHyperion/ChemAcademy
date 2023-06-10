@@ -9,27 +9,37 @@ function fix_dpi(canvas) {
   canvas.setAttribute("height", style_height * dpi);
   canvas.setAttribute("width", style_width * dpi);
 }
+var createScene = null;
+let scene = null;
 class Model3d extends HTMLElement {
   constructor() {
     super();
-
+    function customLoadingScreen() {
+      console.log("customLoadingScreen creation")
+    }
+    customLoadingScreen.prototype.displayLoadingUI = function () {
+      console.log("customLoadingScreen loading")
+     };
+     customLoadingScreen.prototype.hideLoadingUI = function () {
+      loadingScreenDiv.style.display = "none";
+  };
+  var loadingScreen = new customLoadingScreen();
     let shadow = this.attachShadow({ mode: "open" });
     //adds canvas to the component
     const cnv = document.createElement("canvas");
     cnv.setAttribute("id", "renderCanvas");
+    cnv.setAttribute("width", "100%");
+    cnv.setAttribute("height", "100%");
     cnv.setAttribute("touch-action", "none");
-    cnv.style = "width: 20%; height: 20%; touch-action: none;";
    // fix_dpi(cnv);
     shadow.appendChild(cnv);
-
-    let scene = null;
     let BJSloaded = false;
 
     //sets up the babylon environment for loading object into it
     function setUp3DEnvironment() {
       const engine = new BABYLON.Engine(cnv, true);
-
-      let createScene = function () {
+      engine.loadingScreen = loadingScreen;
+       createScene = function () {
         var scene = new BABYLON.Scene(engine);
         scene.clearColor = new BABYLON.Color3(1, 1, 1);
         scene.createDefaultCameraOrLight(true, true, true);
@@ -141,6 +151,9 @@ class Model3d extends HTMLElement {
     switch (name) {
       case "src":
         console.log(`loading ${newValue}...`);
+        if(createScene != null){
+        scene = createScene()
+        }
         this.loadGLTF(newValue);
         break;
       case "background-color":
