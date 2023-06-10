@@ -24,6 +24,9 @@
     async function load(){
         data = await jsondata;
         for(let i = 1; i <= 18; i++){
+            if(i > 8 && i < 18){
+                continue;
+            }
             vshellimg[i] = new Image();
             vshellimg[i].src = "images/Shell" + i + ".svg";
             vshellimg[i].setAttribute("class", "shell");
@@ -61,33 +64,6 @@
     }
     load();
     </script>
-<div id="popOut"style  = "">
-    <div id="elementName">
-        <h1 id="elementNameText">Element Name</h1>
-    </div>
-    <div id="onTitle">
-        <div id="littleElement">
-            <span id="elementAtomicNumber">1</span>
-            <h1 id="elementSymbol">H</h1>
-        </div>
-        <div id="elementInfo">
-            <span id="elementAtomicMass">Mass: 1.008 g/M</span>
-            <span id="elementAtomicDensity">Density: 0.08988 g/L</span>
-            <span id="elementAtomicPhase">Phase: Gas</span>
-        </div>
-    </div>
-    <div id="chatBox">
-        <p id="chatTextP"></p>
-        <div id="chatInput">
-            <label for="chatInputText"></label><input type="text" id="chatInputText" placeholder="Type here...">
-        </div>
-    </div>
-    <div id="summary">
-        <h1 id="summaryTitle">Summary</h1>
-        <p id="summaryText">Hydrogen is a chemical element with atomic number 1 which means there are 1 protons and 1 electrons in the atomic structure. The chemical symbol for Hydrogen is H. With a standard atomic weight of circa 1.008, hydrogen is the lightest element on the periodic table. Its mon atomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryon mass. Non-remnant stars are mainly composed of hydrogen in the plasma state. The most common isotope of hydrogen, termed protium (name rarely used, symbol 1H), has one proton and no neutrons.</p>
-    </div>
-</div>
-
 <script>
     //when press enter on chatInputText, delete the text and add the text to chatTextP
     document.getElementById("chatInputText").addEventListener("keyup", function(event) {
@@ -95,6 +71,12 @@
             event.preventDefault();
             document.getElementById("chatTextP").innerHTML = document.getElementById("chatInputText").value + "<br> <br> <br>";
             document.getElementById("chatInputText").value = "";
+        }
+    });
+    //add event listener, if popOut is not clicked, hide it
+    document.addEventListener("click", function(event) {
+        if (!event.target.classList.contains("modal")) {
+            document.getElementById("popOut").style.display = "none";
         }
     });
 </script>
