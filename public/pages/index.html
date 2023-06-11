@@ -111,16 +111,14 @@
             let temp = document.getElementById("tempshower");
             let boiling = el.boil;
             let melting = el.melt;
-            if(boiling != null && melting == null){
-                let tempdiff = boiling - melting;
-                document.getElementById("low").innerHTML = Math.round(melting )+ " K";
-                document.getElementById("high").innerHTML = Math.round(boiling )+ " K";
-                document.getElementById("mid").innerHTML= Math.round((melting + (tempdiff/2))) + " K";
-                document.getElementById("freezing").style.left= 5 + "%";
-                document.getElementById("boiling").style.left= 95 + "%";
-                document.getElementById("freezing").style.transform = "translateX(-50%)";
-                document.getElementById("boiling").style.transform = "translateX(-50%)";
-            }
+            let tempdiff = boiling - melting;
+            document.getElementById("low").innerHTML = Math.round(melting )+ " K";
+            document.getElementById("high").innerHTML = Math.round(boiling )+ " K";
+            document.getElementById("mid").innerHTML= Math.round((melting + (tempdiff/2))) + " K";
+            document.getElementById("freezing").style.left= 5 + "%";
+            document.getElementById("boiling").style.left= 95 + "%";
+            document.getElementById("freezing").style.transform = "translateX(-50%)";
+            document.getElementById("boiling").style.transform = "translateX(-50%)";
             document.getElementById("source").href = el.source;
             document.getElementById("chatTextP").innerHTML= ""
             document.getElementById("elementNameText").innerHTML = el.name;
@@ -209,7 +207,7 @@
                 }),
                 }).then(response => response.json()).then(data => {
                     document.getElementById("chatInputText").value = "";
-                    document.getElementById("chatTextP").innerHTML = data.text;
+                    document.getElementById("chatTextP").innerHTML += data.text;
                     document.getElementById("chatInputText").style.animation = "";
                 });
             
