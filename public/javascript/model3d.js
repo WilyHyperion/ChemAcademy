@@ -21,8 +21,7 @@ class Model3d extends HTMLElement {
       console.log("customLoadingScreen loading")
      };
      customLoadingScreen.prototype.hideLoadingUI = function () {
-      loadingScreenDiv.style.display = "none";
-  };
+    };
   var loadingScreen = new customLoadingScreen();
     let shadow = this.attachShadow({ mode: "open" });
     //adds canvas to the component

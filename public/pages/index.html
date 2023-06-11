@@ -27,10 +27,10 @@
             if(i > 8 && i < 18){
                 continue;
             }
-            vshellimg[i] = new Image();
-            vshellimg[i].src = "images/Shell" + i + ".svg";
-            vshellimg[i].setAttribute("class", "shell");
-            vshellimg[i].setAttribute("alt", "Shell" + i);
+            // vshellimg[i] = document.createElement("svg");
+            // vshellimg[i].svg = '<svg id="epoRO3TDdUx1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><ellipse rx="17.962712" ry="18.042137" transform="matrix(3.47943 0 0 3.464113 100 100)" fill="#85c7dc" fill-opacity="0.8" stroke-width="0"/><ellipse rx="20.034076" ry="19.819628" transform="matrix(4.492346 0 0 4.540953 100 100)" fill="#d2dbed" fill-opacity="0" stroke="#fff"/><ellipse rx="24.205104" ry="15" transform="matrix(.309852 0 0 0.5 100 10.000001)" fill="#f6ffbc" fill-opacity="0.9" stroke-width="0"/></svg>'';
+            var svgtext = await fetch("images/Shell" +i+ ".svg").then((response) => response.text());
+            vshellimg[i] = svgtext;
         }
         for(let  v of data.elements){
             await addElement(v);
@@ -48,28 +48,38 @@
         element.onclick = function(){
             let elemet = this.id;
             let elobject = data.elements.find((element) => element.name == elemet);
-            popUp(elobject);
+            popUp(elobject, this);
         }
 
         let val = v.shells[v.shells.length - 1];
-        let img = vshellimg[val];
-        element.appendChild(cloneImage(img));
+        val = vshellimg[val];
+        val = val.replace("{{COLOR}}",  v["cpk-hex"]);
+        console.log(v["cpk-hex"]);
+        //create a svg from text
+        const blob = new Blob([val], {type: 'image/svg+xml'});
+        const url = URL.createObjectURL(blob);
+        const image = document.createElement('img');
+        image.addEventListener('load', () => URL.revokeObjectURL(url), {once: true});
+        image.src = url;
+        image.setAttribute("class", "shell");
+        element.appendChild(image);
         document.getElementById("ptable").appendChild(element);
 
     }
-    function popUp(el){
-        document.getElementById("popOut").style.display = "block";
-        document.getElementById("popOut").style.zIndex = "1000";
+    function popUp(el, parentnode){
+        let popout = document.getElementById("popOut");
+        popout.style.display = "block";
+        popout.setAttribute("z-index", "99");
+        document.getElementById("chatTextP").innerHTML= ""
         document.getElementById("elementNameText").innerHTML = el.name;
         document.getElementById("elementAtomicNumber").innerHTML = el.number;
         document.getElementById("elementSymbol").innerHTML = el.symbol;
         document.getElementById("elementAtomicMass").innerHTML = "Mass " + Math.round(el.atomic_mass) + " g/M";
         document.getElementById("elementAtomicDensity").innerHTML = "Density " + Math.round(el.density) + " g/cm<sup>3</sup>";
-        document.getElementById("elementAtomicPhase").innerHTML = "Phase " + Math.round(el.phase);
+        document.getElementById("elementAtomicPhase").innerHTML = "Phase " + el.phase;
         document.getElementById("summaryText").innerHTML = el.summary;
-         document.getElementById("reallifeText").innerHTML = el.reallife;
+        document.getElementById("reallifeText").innerHTML = el.reallife;
        // document.getElementById("").innerHTML= d;
-       console.log(el.bohr_model_3d);
        document.getElementById("atom_model").setAttribute("src", el.bohr_model_3d);        
     }
     function cloneImage(img){
@@ -90,12 +100,13 @@
                 <span id="elementAtomicNumber" class="modal">1</span>
                 <h1 id="elementSymbol" class="modal">H</h1>
             </div>
-            <div id="elementInfo" class="modal">
-                <span id="elementAtomicMass" class="modal">Mass: 1.008 g/M</span>
-                <span id="elementAtomicDensity" class="modal">Density: 0.08988 g/L</span>
-                <span id="elementAtomicPhase" class="modal">Phase: Gas</span>
-            </div>
+            
         </div>
+        <div id="elementInfo" class="modal">
+            <span id="elementAtomicMass" class="modal">Mass: 1.008 g/M</span>
+            <span id="elementAtomicDensity" class="modal">Density: 0.08988 g/L</span>
+            <span id="elementAtomicPhase" class="modal">Phase: Gas</span>
+        </div>  
         <model-3d background-color="#ffffff" id = "atom_model" src= "" class="modal"></model-3d>
         <div id="chatBox" class="modal">
             <p id="chatTextP" class="modal"></p>
@@ -109,8 +120,7 @@
         </div>
         <div id="reallife" class="modal">
             <h1 id="reallifeTitle" class="modal">Uses</h1>
-            <p id="reallifeText" class="modal">asdf </p>
-        
+            <p id="reallifeText" class="modal">asdf </p>    
     </div>
     
 <script>
@@ -118,20 +128,31 @@
     document.getElementById("chatInputText").addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
             event.preventDefault();
-            document.getElementById("chatTextP").innerHTML = document.getElementById("chatInputText").value + "<br> <br> <br>";
+            fetch('/api/gpt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "text": document.getElementById("chatInputText").value,
+                    "element": document.getElementById("elementNameText").innerHTML
+                }),
+                }).then(response => response.json()).then(data => {
+                    document.getElementById("chatTextP").innerHTML += data.text;
+                });
+            document.getElementById("chatTextP").innerHTML = "You: " + document.getElementById("chatInputText").value + "<br> <br> <br>";
             document.getElementById("chatInputText").value = "";
+
         }
     });
     //add event listener, if popOut is not clicked, hide it
     document.addEventListener("click", function(event) {
         if(event.target == null){
             document.getElementById("popOut").style.display = "none";
-            document.getElementById("popOut").style.zIndex = "-1";
             return;
         }
         if (!event.target.classList.contains("modal") && !event.target.classList.contains("element") && !event.target.parentNode.classList.contains("element")) {
             document.getElementById("popOut").style.display = "none";
-            document.getElementById("popOut").style.zIndex = "-1";
         }
     });
 </script>

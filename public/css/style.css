@@ -11,6 +11,9 @@ body {
     grid-template-rows: repeat(10, 1fr);
     padding: 10px;
 }
+.noTransition{
+    transition: none;
+}
 @keyframes rotating {
     from {
         -ms-transform: rotate(0deg);
@@ -19,7 +22,6 @@ body {
         -o-transform: rotate(0deg);
         transform: rotate(0deg);
     }
-
     to {
         -ms-transform: rotate(360deg);
         -moz-transform: rotate(360deg);
@@ -29,36 +31,59 @@ body {
     }
 }
 .element:hover img{
-
-    animation: rotating 2s linear reverse infinite forwards;
+    animation-duration: 2s;
+    animation-name: rotating;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation: alternate;
     z-index: 15;
+
+    
+    
 }
 .element:hover{
     z-index: 15;
-    transform: scale(1.1);
+    transform: scale(0.1) translate(2px, 2px);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     background-color: #3c3c3f;
+    border: 0px;
+
+
 
 }
 .element img {
-    animation: rotating 5s linear infinite forwards;
+    animation-name: rotating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation: alternate;
     position: relative;
     float: right;
-    width: 50px !important;
-    height: 50px;
+    width: 50px!important;
+    height: 50px!important;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+    fill: #3c3c3f;
 }
 
 .element p {
+    margin-left: 5px;
+    font-size: 1em;
     min-width: 50%;
     max-width: 50%;
 
 }
 
 .element {
-    transition: all 0.2s ease-in-out;
+    
+    transition: all 0.2s ease-out;
     margin: 0.2vw;
     overflow: hidden;
     cursor: pointer;
@@ -72,6 +97,7 @@ body {
     display: flex;
     /* justify-content: flex-end; */
     font-family: 'MuseoModerno', cursive;
+    color: white
 }
 
 #title {
@@ -152,6 +178,8 @@ body {
     font: 1.5vh 'MuseoModerno', cursive;
     color: white;
     letter-spacing: 0.2em;
+    position: absolute;
+    bottom: 3.8vh;
 }
 *::selection{
     transition: 0.3s;
@@ -290,6 +318,7 @@ body {
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
+    
 }
 
 .element p {
@@ -316,7 +345,7 @@ body {
     /*display: ;*/
     border: 1px solid #AAAAAA;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(12px);
     border-radius: 13px;
     padding: 10px;
 }
@@ -353,10 +382,9 @@ body {
 }
 #elementAtomicMass{
     position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 50%;
-    height: 70%;
+    top: 1.7vh;
+    left: 6.2vw;
+
     /*background: #434447;*/
     border-radius: 13px;
     display: flex;
@@ -368,23 +396,35 @@ body {
 }
 #elementAtomicPhase{
     position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 5.5vw;
-    height: 5.5vw;
+    top: 4.9vh;
+    left: 6.2vw;
+    /* width: 20%; */
+    /* height: 13%; */
+    /* background: #434447; */
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    font-family: 'MuseoModerno', cursive;
-    font-weight: 300;
+    margin-bottom: 10px;
+    font: 15px 'Stick No Bills', cursive;
+    color: white;
+    text-align: left;
 }
 #elementAtomicDensity{
     position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 5.5vw;
-    height: 5.5vw;
+    top: 8vh;
+    left: 6.2vw;
+    /* width: 20%; */
+    /* height: 19%; */
+    /* background: #434447; */
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    font-family: 'MuseoModerno', cursive;
-    font-weight: 300;
+    margin-bottom: 10px;
+    font: 15px 'Stick No Bills', cursive;
+    color: white;
+    text-align: left;
 }
 #chatInputText:focus{
     outline: none;
