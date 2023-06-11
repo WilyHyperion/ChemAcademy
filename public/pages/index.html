@@ -197,6 +197,7 @@
             event.preventDefault();
             let v = document.getElementById("chatInputText").value
             document.getElementById("chatInputText").value = "";
+            document.getElementById("chatTextP").innerHTML = "";
             document.getElementById("chatInputText").style.animation = "loading 2s ease-in-out 0s infinite normal forwards running";
             fetch('/api/gpt', {
                 method: 'POST',
