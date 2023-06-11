@@ -250,25 +250,11 @@ body {
     box-shadow: 0 0px 4px rgba(230, 230, 230, 0.25);
 }
 
-#chatTextP{
-    text-wrap: normal;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    overflow-y: scroll;
-    font: 1.5vh 'MuseoModerno', cursive;
-    color: white;
-    letter-spacing: 0.2em;
-    position: absolute;
-    bottom: 3.8vh;
-}
 *::selection{
     transition: 0.3s;
     background: transparent;
     color: #1a67ff;
     text-blink: 0.3s;
-}
-#chatTextP::-webkit-scrollbar {
-    display: none;
 }
 #summary{
     position: absolute;
@@ -291,7 +277,7 @@ body {
     text-align: center;
     font: 1.5vh 'MuseoModerno', cursive;
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
 }
 #summaryTitle{
     position: absolute;
@@ -374,22 +360,22 @@ body {
 }
 
 #chatTextP{
-    text-wrap: normal;
+    z-index: 99;
+    position: absolute;
+    top: 0%;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    overflow-y: scroll;
     font: 1.5vh 'MuseoModerno', cursive;
     color: white;
     letter-spacing: 0.2em;
+    font-weight: 300;
+    padding-bottom: 90px;
 }
 *::selection{
     transition: 0.3s;
     background: transparent;
     color: #1a67ff;
     text-blink: 0.3s;
-}
-#chatTextP::-webkit-scrollbar {
-    display: none;
 }
 .element:hover img{
 
@@ -523,22 +509,10 @@ body {
     box-shadow: 0 0px 4px rgba(230, 230, 230, 0.25);
 }
 
-#chatTextP{
-    text-wrap: normal;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    overflow-y: scroll;
-    font: 1.5vh 'MuseoModerno', cursive;
-    color: white;
-    letter-spacing: 0.2em;
-}
 *::selection{
     transition: 0.3s;
     background: transparent;
     color: #000000;
-}
-#chatTextP::-webkit-scrollbar {
-    display: none;
 }
 
 #chatBox{
@@ -548,12 +522,14 @@ body {
         right: 1vh;
         width: 50%;
         overflow-y: scroll;
-        height: 20vh;
+        top: 65%;
+        height: 30vh;
     /*    make text go from bottom to top*/
         writing-mode: tb-lr;
     
 }
 #chatInputText{
+    z-index: 101;
     background: linear-gradient(139.82deg, rgba(111, 111, 111, 0.64) 6.83%, rgba(171, 171, 171, 0.456) 163.81%);
     border: 1px solid #AAAAAA;
     box-shadow: 0 0px 4px rgba(0, 0, 0, 0.25);

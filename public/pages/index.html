@@ -48,7 +48,7 @@
         "post-transition metal" : "2f4d47",
         "unknown" : "6A7377",
         "lanthanide" : "004a77",
-        "actinide" : "613b28",
+        "actinide" : "613b28", 
 
     }
     async function addElement(v){
@@ -174,7 +174,7 @@
 
         </div>
         <model-3d background-color="#ffffff" id = "atom_model" src= "" class="modal"></model-3d>
-        <a id = "source" class="modal" href = "">Futher reading</a>
+        <a id = "source" class="modal" target="_blank" href = "">Futher reading</a>
         <div id="chatBox" class="modal">
             <p id="chatTextP" class="modal"></p>
             <div id="chatInput" class="modal">
@@ -195,6 +195,8 @@
     document.getElementById("chatInputText").addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
             event.preventDefault();
+            let v = document.getElementById("chatInputText").value
+            document.getElementById("chatInputText").value = "";
             document.getElementById("chatInputText").style.animation = "loading 2s ease-in-out 0s infinite normal forwards running";
             fetch('/api/gpt', {
                 method: 'POST',
@@ -202,7 +204,7 @@
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    "text": document.getElementById("chatInputText").value,
+                    "text": v,
                     "element": document.getElementById("elementNameText").innerHTML
                 }),
                 }).then(response => response.json()).then(data => {
