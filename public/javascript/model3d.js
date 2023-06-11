@@ -28,7 +28,7 @@ class Model3d extends HTMLElement {
     const cnv = document.createElement("canvas");
     cnv.setAttribute("id", "renderCanvas");
     
-    cnv.style = "touch-action: none; border-radius: 10px; height: 30vh; width: 33vw";
+    cnv.style = "touch-action: none; border-radius: 10px; height: 30vh; width: 33vw;";
 
    // fix_dpi(cnv);
     shadow.appendChild(cnv);

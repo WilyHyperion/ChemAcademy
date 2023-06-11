@@ -37,7 +37,20 @@
         }
     }
     
+    const cat_to_color = {
+        "transition metal" : "433c65",
+        "diatomic nonmetal" : "53C6FF",
+        "noble gas" : "623842",
+        "alkali metal" : "244d57",
+        "alkaline earth metal" : "622e39",
+        "metalloid" : "523e1b",
+        "polyatomic nonmetal" : "2a4165",
+        "post-transition metal" : "2f4d47",
+        "unknown" : "6A7377",
+        "lanthanide" : "004a77",
+        "actinide" : "613b28",
 
+    }
     async function addElement(v){
         const element = document.createElement("div");
         element.setAttribute("class", "element");
@@ -45,7 +58,7 @@
         element.style.gridColumnStart = v.xpos;
         element.style.gridRowStart = v.ypos;
         element.innerHTML = "<p> " + v.symbol+"</p>";
-        element.onclick = function(){
+        element.onclick = function(e){
             let elemet = this.id;
             let elobject = data.elements.find((element) => element.name == elemet);
             popUp(elobject, this);
@@ -53,9 +66,9 @@
 
         let val = v.shells[v.shells.length - 1];
         val = vshellimg[val];
-        val = val.replace("{{COLOR}}",  v["cpk-hex"]);
-        console.log(v["cpk-hex"]);
-        //create a svg from text
+        let cato = v.category;
+        let color = cat_to_color[cato];
+        val = val.replace("{{COLOR}}",  color); 
         const blob = new Blob([val], {type: 'image/svg+xml'});
         const url = URL.createObjectURL(blob);
         const image = document.createElement('img');
@@ -68,19 +81,62 @@
     }
     function popUp(el, parentnode){
         let popout = document.getElementById("popOut");
-        popout.style.display = "block";
-        popout.setAttribute("z-index", "99");
-        document.getElementById("chatTextP").innerHTML= ""
-        document.getElementById("elementNameText").innerHTML = el.name;
-        document.getElementById("elementAtomicNumber").innerHTML = el.number;
-        document.getElementById("elementSymbol").innerHTML = el.symbol;
-        document.getElementById("elementAtomicMass").innerHTML = "Mass " + Math.round(el.atomic_mass) + " g/M";
-        document.getElementById("elementAtomicDensity").innerHTML = "Density " + Math.round(el.density) + " g/cm<sup>3</sup>";
-        document.getElementById("elementAtomicPhase").innerHTML = "Phase " + el.phase;
-        document.getElementById("summaryText").innerHTML = el.summary;
-        document.getElementById("reallifeText").innerHTML = el.reallife;
-       // document.getElementById("").innerHTML= d;
-       document.getElementById("atom_model").setAttribute("src", el.bohr_model_3d);        
+        let defaultWidth = popout.style.width;
+        let defaultHeight = popout.style.height;
+        let defaultX = popout.style.left;
+        let defaultY = popout.style.top;
+        popout.style.display = "flex";
+        popout.style.transition = "0s";
+        //set its location to the element clicked
+        popout.style.left = parentnode.offsetLeft + "px";
+        popout.style.top = parentnode.offsetTop + "px";
+        //scale it to the size of the element
+        popout.style.width = parentnode.offsetWidth + "px";
+        popout.style.height = parentnode.offsetHeight + "px";
+        //set z-index to be above everything else
+        popout.style.zIndex = "100";
+        popout.style.transition = "all 0.5s ease-out";
+        popout.style.overflow = "hidden";
+        document.getElementById("summaryText").style.opacity = "0";
+        document.getElementById("reallifeText").style.opacity = "0";
+        setTimeout(function(){
+            //remove everything else in the popout
+            
+            popout.style.display = "block";
+
+            popout.style.width = defaultWidth;
+            popout.style.height = defaultHeight;
+            popout.style.left = defaultX
+            popout.style.top = defaultY
+            let temp = document.getElementById("tempshower");
+            let boiling = el.boil;
+            let melting = el.melt;
+            if(boiling != null && melting == null){
+                let tempdiff = boiling - melting;
+                document.getElementById("low").innerHTML = Math.round(melting )+ " K";
+                document.getElementById("high").innerHTML = Math.round(boiling )+ " K";
+                document.getElementById("mid").innerHTML= Math.round((melting + (tempdiff/2))) + " K";
+                document.getElementById("freezing").style.left= 5 + "%";
+                document.getElementById("boiling").style.left= 95 + "%";
+                document.getElementById("freezing").style.transform = "translateX(-50%)";
+                document.getElementById("boiling").style.transform = "translateX(-50%)";
+            }
+            document.getElementById("source").href = el.source;
+            document.getElementById("chatTextP").innerHTML= ""
+            document.getElementById("elementNameText").innerHTML = el.name;
+            document.getElementById("elementAtomicNumber").innerHTML = el.number;
+            document.getElementById("elementSymbol").innerHTML = el.symbol;
+            document.getElementById("elementAtomicMass").innerHTML = "Mass " + Math.round(el.atomic_mass) + " g/M";
+            document.getElementById("elementAtomicDensity").innerHTML = "Density " + Math.round(el.density) + " g/cm<sup>3</sup>";
+            document.getElementById("elementAtomicPhase").innerHTML = "Phase " + el.phase;
+            document.getElementById("summaryText").innerHTML = el.summary;
+            document.getElementById("reallifeText").innerHTML = el.reallife;
+            document.getElementById("atom_model").setAttribute("src", el.bohr_model_3d);    
+            setTimeout(function(){
+                document.getElementById("summaryText").style.opacity = "1";
+                document.getElementById("reallifeText").style.opacity = "1";
+            }, 500);
+        }, 100);
     }
     function cloneImage(img){
         let i = new Image();
@@ -106,12 +162,25 @@
             <span id="elementAtomicMass" class="modal">Mass: 1.008 g/M</span>
             <span id="elementAtomicDensity" class="modal">Density: 0.08988 g/L</span>
             <span id="elementAtomicPhase" class="modal">Phase: Gas</span>
-        </div>  
+        </div>
+        <div id = "tempbar"  class="modal">
+            <div class = "modal top" id = "low">K</div>
+            <div class = "modal top" id = "mid">K</div>
+            <div class = "modal top" id = "high">K</div>
+            <div id = "freezing" class="modal bottom">
+                Melting/Freezing
+            </div>
+            <div id = "boiling" class="modal bottom">
+                Boiling/Condensating
+            </div>
+
+        </div>
         <model-3d background-color="#ffffff" id = "atom_model" src= "" class="modal"></model-3d>
+        <a id = "source" class="modal" href = "">Futher reading</a>
         <div id="chatBox" class="modal">
             <p id="chatTextP" class="modal"></p>
             <div id="chatInput" class="modal">
-                <label for="chatInputText"></label><input type="text" id="chatInputText" class="modal" placeholder="Type here...">
+                <label for="chatInputText"></label><input type="text" id="chatInputText" class="modal" placeholder="Ask some questions...">
             </div>
         </div>
         <div id="summary" class="modal">
@@ -128,6 +197,7 @@
     document.getElementById("chatInputText").addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
             event.preventDefault();
+            document.getElementById("chatInputText").style.animation = "loading 2s ease-in-out 0s infinite normal forwards running";
             fetch('/api/gpt', {
                 method: 'POST',
                 headers: {
@@ -138,21 +208,38 @@
                     "element": document.getElementById("elementNameText").innerHTML
                 }),
                 }).then(response => response.json()).then(data => {
-                    document.getElementById("chatTextP").innerHTML += data.text;
+                    document.getElementById("chatInputText").value = "";
+                    document.getElementById("chatTextP").innerHTML = data.text;
+                    document.getElementById("chatInputText").style.animation = "";
                 });
-            document.getElementById("chatTextP").innerHTML = "You: " + document.getElementById("chatInputText").value + "<br> <br> <br>";
-            document.getElementById("chatInputText").value = "";
+            
 
         }
     });
     //add event listener, if popOut is not clicked, hide it
     document.addEventListener("click", function(event) {
         if(event.target == null){
-            document.getElementById("popOut").style.display = "none";
+            document.getElementById("popOut").style.transition = "all 0.5s ease-out";
+            document.getElementById("popOut").style.opacity = "0";
+            setTimeout(function(){
+                document.getElementById("popOut").style.display = "none";
+                document.getElementById("popOut").style.transition = "";
+            }, 500);
             return;
         }
         if (!event.target.classList.contains("modal") && !event.target.classList.contains("element") && !event.target.parentNode.classList.contains("element")) {
-            document.getElementById("popOut").style.display = "none";
+            document.getElementById("popOut").style.transition = "all 0.4s ease-in-out";
+            document.getElementById("popOut").style.top = "100%";
+            console.log("hi");
+            setTimeout(function(){
+                console.log("hi");
+                document.getElementById("popOut").style.display = "none";
+                document.getElementById("popOut").style.zIndex = "-1";
+                document.getElementById("popOut").style.transition = "";
+                document.getElementById("popOut").style.top = "10%";
+
+            }, 400);
+
         }
     });
 </script>

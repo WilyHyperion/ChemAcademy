@@ -3,7 +3,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #434447;
+    background-color: rgb(55, 55, 55);
 }
 #ptable{
     display: grid;
@@ -13,6 +13,31 @@ body {
 }
 .noTransition{
     transition: none;
+}
+@keyframes loading{
+    /* make boxshadow expand and decrease with a white coloring */
+    
+    50%{
+        box-shadow: 0 0px 10px rgba(230, 230, 230, 0.25);
+        color: #000000;
+    }
+
+
+}
+@keyframes wobble{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    75%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
 }
 @keyframes rotating {
     from {
@@ -52,6 +77,57 @@ body {
 
 
 
+}
+#tempbar{
+    position: absolute;
+    width: 40%;
+    height: 2%;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, rgb(117, 117, 255), #ffff00, rgb(255, 115, 115)) ;
+    opacity: 0.7;
+    left: 5%;
+    top: 20%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 0.2s;
+}
+#tempbar::before{
+    background-image: linear-gradient(to top, rgb(87, 87, 255), rgb(255, 255, 84), rgb(255, 72, 72)) ;
+    
+}
+#tempbar:hover{
+    opacity: 1;
+    /* scale the section hovered only */
+    transform: scale(1.01);
+
+}
+
+#tempbar div{
+    position: absolute;
+    z-index: 10;
+    font: 14px 'Stick No Bills', cursive;
+    color: white;
+}
+#low{
+    position: absolute;
+    left: 5%;
+}
+#mid{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+}
+#high{
+    position: absolute;
+    right: 5%;
+}
+.top{
+    position: absolute;
+    bottom: 100%;
+}
+.bottom{
+    position: absolute;
+    top: 100%;
 }
 .element img {
     animation-name: rotating;
@@ -163,6 +239,10 @@ body {
     font-family: 'MuseoModerno', cursive;
     font-weight: 300;
 
+
+}
+#littleElement:hover{
+    animation: wobble 0.3s ease-out 1;
 }
 #chatInputText:focus{
     outline: none;
@@ -202,6 +282,16 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    
+}
+#source{
+    position: absolute;
+    top: 80%;
+    width: 50%;
+    text-align: center;
+    font: 1.5vh 'MuseoModerno', cursive;
+    color: white;
+    text-decoration: none;
 }
 #summaryTitle{
     position: absolute;
@@ -220,10 +310,9 @@ body {
 }
 #atom_model{
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 5%;
     margin-bottom: 10px;
-
 }
 #summaryText{
     position: absolute;
@@ -239,6 +328,7 @@ body {
     margin-bottom: 10px;
     font: 15px 'Stick No Bills', cursive;
     color: white;
+    transition: 0.5s;
 }
 #reallifeTitle{
     position: absolute;
@@ -269,6 +359,7 @@ body {
     margin-bottom: 10px;
     font: 15px 'Stick No Bills', cursive;
     color: white;
+    transition: 0.5s;
 }
 #onTitle{
     position: absolute;
@@ -444,8 +535,7 @@ body {
 *::selection{
     transition: 0.3s;
     background: transparent;
-    color: #1a67ff;
-    text-blink: 0.3s;
+    color: #000000;
 }
 #chatTextP::-webkit-scrollbar {
     display: none;
