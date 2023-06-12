@@ -3,7 +3,7 @@ Created for a [hackathon](https://www.hackakhan.org/). A better version of the o
 
 ## Running Locally
 This project needs nodejs to run. If you dont have that it must be installed.
-It currently needs an openai api key. A version without the AI introgration will be coming soon. For now you can delete the refrences to it in server.js on lines 14-16 and 34-38 and avoid the text box.
+It currently needs an openai api key. A version without the AI introgration will be coming soon. For now you can delete the refrences to it in server.js on lines 14-16 and 34-38 and avoid the text box. 
 First, clone this repo. 
 ```
 git clone https://github.com/WilyHyperion/ChemAcademy/
