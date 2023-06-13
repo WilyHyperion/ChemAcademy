@@ -24,6 +24,21 @@ body {
 
 
 }
+
+@keyframes shakeError {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(5px);
+    }
+    75%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
 @keyframes wobble{
     0%{
         transform: rotate(0deg);
@@ -546,18 +561,19 @@ body {
     width: 48%;
     position: fixed;
     bottom: 8px;
-    transition: 0.2s;
+    transition: 0.4s;
+    cursor: not-allowed;
 
 }
 #chatInputText:focus{
     outline: none;
     border: 1px solid #e8e8e8;
-    box-shadow: 0 0px 4px rgba(230, 230, 230, 0.25);
+    box-shadow: 0 0 4px rgba(230, 230, 230, 0.25);
+    cursor: none;
+    background-color: black;
+    color: white;
 }
 #chatInputText::placeholder {
     color: white;
     transition: 0.2s;
-}
-#chatInputText:focus::placeholder {
-    color: black;
 }

@@ -11,9 +11,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 app.use(express.json());
 const port = 3000;
 console.log(process.env.API_KEY);
-const chatgpt = new ChatGPTAPI({
+/*const chatgpt = new ChatGPTAPI({
     apiKey: process.env.GPT_KEY,
-});
+});*/
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/pages/index.html");
 });
@@ -26,16 +26,17 @@ app.get('/css/:file', (req, res) => {
 app.get('/images/:file', (req, res) => {
     res.sendFile(__dirname + "/public/images/" + req.params.file);
 });
-app.get('/data/:file', (req, res) => {
+app.get('/data/:file', (req , res) => {
     res.sendFile(__dirname + "/public/data/" + req.params.file);
 });
 app.post('/api/gpt', async function(req, res) {
     let message = req.body.text;
-    let r  = await chatgpt.sendMessage(message, {
+    res.send("Sorry, the AI is only available in the node.js version.");
+/*    let r  = await chatgpt.sendMessage(message, {
         systemMessage: `You are a chemistry teacher, and your students are asking you questions about elements, specifically the element ` + req.body.element + `. If you are unsure what element it is, use that element. "`
     });
     console.log(r);
-    res.send(r);
+    res.send(r);*/
 
 })
 app.listen(port, () => {

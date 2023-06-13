@@ -174,28 +174,39 @@
 
         </div>
         <model-3d background-color="#ffffff" id = "atom_model" src= "" class="modal"></model-3d>
-        <a id = "source" class="modal" target="_blank" href = "">Futher reading</a>
+        <a id = "source" class="modal" target="_blank" href = "">Further reading</a>
         <div id="chatBox" class="modal">
             <p id="chatTextP" class="modal"></p>
             <div id="chatInput" class="modal">
-                <label for="chatInputText"></label><input type="text" id="chatInputText" class="modal" placeholder="Ask some questions...">
+                <label for="chatInputText"></label><input type="text" id="chatInputText" class="modal" placeholder="Not Available">
             </div>
         </div>
         <div id="summary" class="modal">
             <h1 id="summaryTitle" class="modal">Summary</h1>
-            <p id="summaryText" class="modal">aemical element with atomic number 1 which means there are 1 protons and 1 electrons in the atomic structure. The chemical symbol for Hydrogen is H. With a standard atomic weight of circa 1.008, hydrogen is the lightest element on the periodic table. Its mon atomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryon mass. Non-remnant stars are mainly composed of hydrogen in the plasma state. The most common isotope of hydrogen, termed protium (name rarely used, symbol 1H), has one proton and no neutrons.</p>
+            <p class="modal" id="summaryText">aemical element with atomic number 1 which means there are 1 protons and 1
+                electrons in the atomic structure. The chemical symbol for Hydrogen is H. With a standard atomic weight
+                of circa 1.008, hydrogen is the lightest element on the periodic table. Its mon atomic form (H) is the
+                most abundant chemical substance in the Universe, constituting roughly 75% of all baryon mass.
+                Non-remnant stars are mainly composed of hydrogen in the plasma state. The most common isotope of
+                hydrogen, termed protium (name rarely used, symbol 1H), has one proton and no neutrons.</p>
         </div>
         <div id="reallife" class="modal">
             <h1 id="reallifeTitle" class="modal">Uses</h1>
-            <p id="reallifeText" class="modal">asdf </p>    
+            <p class="modal" id="reallifeText">asdf </p>
+        </div>
     </div>
     
 <script>
     //when press enter on chatInputText, delete the text and add the text to chatTextP
     document.getElementById("chatInputText").addEventListener("keyup", function(event) {
+        let self = this;
         if (event.keyCode === 13) {
             event.preventDefault();
-            let v = document.getElementById("chatInputText").value
+            self.style.animation = "shakeError 0.3s ease-in-out 0s 1 normal forwards running";
+            setTimeout(function(){
+                self.style.animation = "";
+            }, 500);
+            /*let v = document.getElementById("chatInputText").value
             document.getElementById("chatInputText").value = "";
             document.getElementById("chatTextP").innerHTML = "";
             document.getElementById("chatInputText").style.animation = "loading 2s ease-in-out 0s infinite normal forwards running";
@@ -212,7 +223,7 @@
                     document.getElementById("chatInputText").value = "";
                     document.getElementById("chatTextP").innerHTML += data.text;
                     document.getElementById("chatInputText").style.animation = "";
-                });
+                });*/
             
 
         }
