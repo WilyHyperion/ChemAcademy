@@ -1,5 +1,5 @@
 # ChemAcademy
-Created for a [hackathon](https://www.hackakhan.org/). A better version of the online periodic table
+Created for a [hackathon](https://www.hackakhan.org/). An interactive online periodic table.
 
 ## Running Locally
 This project needs nodejs to run. If you dont have that it must be installed.
